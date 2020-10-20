@@ -1,0 +1,4 @@
+#Sun Oct 18 13:04:06 WEST 2020
+base.0=/root/AndroidStudioProjects/FragmentComunicate/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

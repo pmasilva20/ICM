@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textViewCityListEntrie"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#929293"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:text="TextView"
+    android:textAllCaps="false"
+    android:textColor="#FFDADADA"
+    android:textSize="32sp"
+    android:textStyle="bold" />

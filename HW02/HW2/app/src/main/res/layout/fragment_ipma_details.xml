@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IpmaDetails">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#606060"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerViewDay">
+
+            <TextView
+                android:id="@+id/textViewPrecipation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:hint="20%"
+                android:textColor="@color/white"
+                android:textColorHint="#BFBFBF"
+                android:textSize="24sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewDate"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:hint="05/11/2020"
+                android:textColor="@color/white"
+                android:textColorHint="#BFBFBF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewTemperatureInterval"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewTemperatureInterval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="60dp"
+                android:hint="15ºC-20ºC"
+                android:textColor="@color/white"
+                android:textColorHint="#BFBFBF"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+            <TextView
+                android:id="@+id/textViewWindDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:hint="NW"
+                android:textColor="@color/white"
+                android:textColorHint="#BFBFBF"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTemperatureInterval"
+                app:layout_constraintVertical_bias="0.165" />
+
+            <TextView
+                android:id="@+id/textViewWindSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:hint="Class 3"
+                android:textColor="@color/white"
+                android:textColorHint="#BFBFBF"
+                android:textSize="24sp"
+                android:textAlignment="textEnd"
+                app:layout_constraintBaseline_toBaselineOf="@+id/textViewTemperatureInterval"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/labelDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Date:"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/textViewDate"
+                app:layout_constraintStart_toStartOf="@+id/textViewDate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelPrecipitation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp"
+                android:text="Precipitacion Chance"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/textViewPrecipation"
+                app:layout_constraintEnd_toEndOf="@+id/textViewPrecipation"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/labelTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Temperature Interval(ºC)"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/textViewTemperatureInterval"
+                app:layout_constraintStart_toStartOf="@+id/textViewTemperatureInterval"
+                app:layout_constraintTop_toBottomOf="@+id/textViewDate" />
+
+            <TextView
+                android:id="@+id/labelWindSpeed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Wind Speed Class(0-12)"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toTopOf="@+id/textViewWindSpeed"
+                app:layout_constraintEnd_toEndOf="@+id/textViewWindSpeed"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPrecipation" />
+
+            <TextView
+                android:id="@+id/labelWindDirection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:text="Wind Direction"
+                android:textColor="@color/white"
+                android:textColorHint="#BFBFBF"
+                app:layout_constraintBottom_toTopOf="@+id/textViewWindDirection"
+                app:layout_constraintStart_toStartOf="@+id/textViewWindDirection"
+                app:layout_constraintTop_toBottomOf="@+id/textViewTemperatureInterval" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
